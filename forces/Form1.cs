@@ -15,7 +15,7 @@ namespace forces
         public Form1()
         {
             InitializeComponent();
-        } 
+        }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -25,11 +25,11 @@ namespace forces
         double sin(double x)
         {
             return (Math.Sin(x * Math.PI / 180.0));
-            
-        double asin(double x)
+
+            double asin(double x)
             {
                 return (Math.Asin(x) * 180 / Math.PI);
-                
-                private void Button1_Click(object
-
+            }
+        }
+    }
 }
