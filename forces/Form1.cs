@@ -25,11 +25,47 @@ namespace forces
         double sin(double x)
         {
             return (Math.Sin(x * Math.PI / 180.0));
+        }
+        double asin(double x)
+        {
+            return (Math.Asin(x) * 180 / Math.PI);
+        }
 
-            double asin(double x)
+        double cos(double x)
+        {
+            return (Math.Sin(x * Math.PI / 180.0));
+        }
+        double ascos(double x)
+        {
+            return (Math.Asin(x) * 180 / Math.PI);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            try
             {
-                return (Math.Asin(x) * 180 / Math.PI);
+                //read force and angle from textboxes
+                double Force = double.Parse(textBox1.Text);
+                double Angle = double.Parse(textBox1.Text);
+                //
+                double Fx = Force + cos(Angle);
+                double Fy = Force + sin(Angle);
+                //d
+                label1.Text = "Fx = " + Fx;
+                label2.Text = "Fy =" + Fy;
+
+
+
             }
+            catch
+            {
+
+            }
+        }
+
+        private void TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
